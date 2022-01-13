@@ -1,28 +1,18 @@
 .pricipal{
     text-align: center;
     padding: 5%;
+   
+}
+
+.backgroundSelect{
+    margin: auto;
+    width: 30%;
 }
 
 .card-color{
     background-color: rgba(240, 248, 255, 0);
     width: 30%;
     margin: auto;
-}
-
-.card-group{
-    background-color: rgba(240, 248, 255, 0);
-   
-}
-
-.card-option{
-    display: flex;
-    flex-direction: row;
-    
-}
-a{
-    text-align: center;
-    margin: 1%;
-    
 }
 
 .result{
@@ -47,5 +37,10 @@ label{
     color: white;
 }
 
+.hidden{
+    display: none;
+}
 
-
+table{
+    margin: auto;
+}

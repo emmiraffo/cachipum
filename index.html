@@ -14,6 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@400;700&family=Raleway:wght@200;500&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ed22ecc715.js" crossorigin="anonymous"></script>
     <title>Cachipum</title>
 </head>
@@ -22,66 +24,59 @@
 <body style="background-color: rgb(75, 0, 56);">
 
     <h1 class="text-center text-white py-5">Juega Piedra, Papel o Tijera</h1>
-    <h5 class="text-center text-white ">ELIGE TU JUGADA</h5>
 
+    <div id="nroIntentos" class="backgroundSelect">
+        <label>Ingrese el número de intentos</label>
+        <input type="number" id="intentos" min="1" max="50">
+        <input type="button" value="Iniciar" id="btnInicio">
+    </div>
 
-    <div class="pricipal py-2">
-        <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="piedra" value="piedra">
-            <label class="form-check-label" for="inlineRadio1">✊ P I E D R A </label>
+    <div id="juego" class="hidden">
+        <div class="pricipal py-2" id="opcionesCachipun">
+            <h5 class="text-center text-white ">ELIGE TU JUGADA #<span id="nroJugada"></span></h5>
+            <div class="form-check form-check-inline ">
+                <input class="form-check-input" type="radio" name="opcionesCachipun" id="piedra" value="piedra">
+                <label class="form-check-label" for="inlineRadio1">✊ P I E D R A </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="opcionesCachipun" id="papel" value="papel">
+                <label class="form-check-label" for="inlineRadio2">✋ P A P E L</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="opcionesCachipun" id="tijera" value="tijera">
+                <label class="form-check-label" for="inlineRadio3">✌T I J E R A </label>
+            </div>
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="papel" value="papel">
-            <label class="form-check-label" for="inlineRadio2">✋ P A P E L</label>
+
+        <div class="result ">
+            <div class="imageResult">
+                <div id="Seleccion"></div>
+            </div>
+            <div class="imageResult">
+                <div id="resultado"></div>
+            </div>
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tijera" value="tijera">
-            <label class="form-check-label" for="inlineRadio3">✌T I J E R A </label>
+
+        <div id="divTable">
+        <table class="table w-50 text-white text-center">
+            <thead>
+              <tr>
+                <th scope="col">Ronda</th>
+                <th scope="col">Tus Puntos</th>
+                <th scope="col">Puntaje Maquina</th>
+              </tr>
+            </thead>
+            <tbody id="ronda">
+            </tbody>
+          </table>
         </div>
     </div>
 
-    <div class="result ">
-        <div class="imageResult">
-            <h3 >TÚ</h3>
-            <div  id="Seleccion"></div>
-        </div>
-        <div class="imageResult">
-            <h3 >LA MAQUINA</h3>
-            <div  id="resultado"></div>
-        </div>
+    <div class="hidden" id="finJuego">
+        <h2 class="text-center text-white py-5 ">Finalizó el juego, <span id="ganador"></span></h2>
+        <input type="button" value="Volver a jugar" />
     </div>
-
-
     <script src="./src/main.js"></script>
-
-
-
-
 </body>
 
 </html>
-
-
-<!--<div class="container card-option">
-    <div  type="button" class="card-color text-white"  id="piedra" >
-        <img src="./img/2.png" class="card-img-top" alt="Elegiste Piedra" >
-        <div class="card-body">
-            <h5 class="card-title">P I E D R A</h5>
-        </div>
-    </div>
-
-    <div  type="button" class="card-color text-white"  name="2"  id="papel" >
-        <img src="./img/3.png" class="card-img-top" alt="..." >
-        <div class="card-body">
-            <h5 class="card-title">P A P E L</h5>
-        </div>
-    </div>
-
-    <div  type="button" class="card-color text-white"  name="3"  id="tijera"  >
-        <img src="./img/1.png" class="card-img-top" alt="..." >
-        <div class="card-body">
-            <h5 class="card-title"> T I J E R A </h5>
-        </div>
-    </div>
-
-</div>-->
