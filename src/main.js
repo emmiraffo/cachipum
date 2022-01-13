@@ -1,7 +1,3 @@
-var piedra = document.getElementById('piedra').value
-var papel = document.getElementById('papel').value
-var tijera = document.getElementById('tijera').value
-
 var puntajeUsuario = 0;
 var puntajeMaquina = 0;
 var nroIntentos = 0;
